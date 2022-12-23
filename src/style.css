@@ -12,11 +12,13 @@ body {
 }
 
 #content {
+    height: 100%;
     border: 2px solid goldenrod;
 }
 
 h1 {
     text-align: center;
+    padding-block: 3vh;
 }
 
 .red {
@@ -28,7 +30,14 @@ h1 {
     justify-content: center;
 }
 
-.tab-container div{
+.tab {
     flex: 1 1 auto;
     text-align: center;
+    cursor: pointer;
+    padding: 1vh;
+    font-size: 1.2rem;
+}
+
+.selected{
+    background-color: rgb(182, 255, 182);
 }

@@ -5,9 +5,9 @@ function createInitialPage() {
 
   const div = createHtmlElement('div', ['tab-container'], null, null);
 
-  const tab1 = createHtmlElement('div', null, null, 'Home');
-  const tab2 = createHtmlElement('div', null, null, 'Menu');
-  const tab3 = createHtmlElement('div', null, null, 'Contact Us');
+  const tab1 = createHtmlElement('div', ['tab', 'selected'], null, 'Home');
+  const tab2 = createHtmlElement('div', ['tab'], null, 'Menu');
+  const tab3 = createHtmlElement('div', ['tab'], null, 'Contact Us');
   div.append(tab1, tab2, tab3);
   document.querySelector('#content').append(h1, div);
 }

@@ -28,6 +28,7 @@ h1 {
 .tab-container {
     display: flex;
     justify-content: center;
+    gap: 3vw;
 }
 
 .tab {

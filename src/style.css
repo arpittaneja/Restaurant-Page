@@ -2,6 +2,7 @@
     box-sizing: border-box;
     padding: 0;
     margin: 0;
+    border: 1px solid black;
 }
 
 html,
@@ -14,10 +15,20 @@ body {
     border: 2px solid goldenrod;
 }
 
-h1{
+h1 {
     text-align: center;
 }
 
-.red{
+.red {
     color: red;
+}
+
+.tab-container {
+    display: flex;
+    justify-content: center;
+}
+
+.tab-container div{
+    flex: 1 1 auto;
+    text-align: center;
 }

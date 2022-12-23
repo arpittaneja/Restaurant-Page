@@ -10,7 +10,7 @@ function createHtmlElement(name, classList, attributes, string) {
       element.setAttribute(key, attributes[key]);
     });
   }
-  element.textContent = string;
+  if (string) element.textContent = string;
   return element;
 }
 export default createHtmlElement;

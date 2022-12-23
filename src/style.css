@@ -1,10 +1,23 @@
-*{
+* {
     box-sizing: border-box;
-    padding:0;
+    padding: 0;
     margin: 0;
 }
 
-html, body{
+html,
+body {
     height: 100%;
-    border: 3px solid fuchsia;
+    border: 1px solid fuchsia;
+}
+
+#content {
+    border: 2px solid goldenrod;
+}
+
+h1{
+    text-align: center;
+}
+
+.red{
+    color: red;
 }

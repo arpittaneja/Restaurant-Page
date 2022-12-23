@@ -1,3 +1,4 @@
 import './style.css';
+import createInitialPage from './initial';
 
-console.log('Starting');
+createInitialPage();

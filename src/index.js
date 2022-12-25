@@ -13,28 +13,26 @@ document.querySelector('#content').append(tabContent);
 tabContent.append(loadHomeContent());
 
 tabs.forEach((tab) => {
-    tab.addEventListener('click', (e) => {
-        if (Array.from(e.target.classList).includes('unselected')) {
-            if (e.target.textContent === "Home") {
-                tabContent.textContent = '';
-                tabContent.append(loadHomeContent());
-            }
-            else if (e.target.textContent === "Menu") {
-                tabContent.textContent = '';
-                tabContent.append(loadMenuContent());
-            }
-            else {
-                tabContent.textContent = '';
-                tabContent.append(loadContactContent());
-            }
-        
-            e.target.classList.add('selected');
-            tabs.forEach((tb) => {
-                if (e.target !== tb) {
-                    tb.classList.remove('selected');
-                    tb.classList.add('unselected');
-                }
-            })
+  tab.addEventListener('click', (e) => {
+    if (Array.from(e.target.classList).includes('unselected')) {
+      if (e.target.textContent === 'Home') {
+        tabContent.textContent = '';
+        tabContent.append(loadHomeContent());
+      } else if (e.target.textContent === 'Menu') {
+        tabContent.textContent = '';
+        tabContent.append(loadMenuContent());
+      } else {
+        tabContent.textContent = '';
+        tabContent.append(loadContactContent());
+      }
+
+      e.target.classList.add('selected');
+      tabs.forEach((tb) => {
+        if (e.target !== tb) {
+          tb.classList.remove('selected');
+          tb.classList.add('unselected');
         }
-    });
+      });
+    }
+  });
 });

@@ -5,16 +5,16 @@ function loadHomeContent() {
     'div',
     ['home-head'],
     null,
-    'Welcome to Tannin and Table'
+    'Tannin and Table'
   );
 
   const homeMain = createHtmlElement(
     'div',
     ['home-main'],
     null,
-    'Enjoy the finest cousines!'
+    'Enjoy our finest cousines!'
   );
-  const div = createHtmlElement('div', ['tab-content'], null, null);
+  const div = createHtmlElement('div', ['home-content'], null, null);
   div.append(homeHead, homeMain);
   return div;
 }

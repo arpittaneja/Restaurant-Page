@@ -1,7 +1,7 @@
 import createHtmlElement from './create';
 
 function loadMenuContent() {
-  const div = createHtmlElement('div', ['tab-content'], null, 'menu');
+  const div = createHtmlElement('div', ['menu-content'], null, 'menu');
   return div;
 }
 

@@ -5,14 +5,13 @@ function loadHomeContent() {
     'div',
     ['home-head'],
     null,
-    'Tannin and Table'
+    'The Wednesday Cafe'
   );
-
   const homeMain = createHtmlElement(
     'div',
     ['home-main'],
     null,
-    'Enjoy our finest cousines!'
+    'Where The Darkness Brews'
   );
   const div = createHtmlElement('div', ['home-content'], null, null);
   div.append(homeHead, homeMain);

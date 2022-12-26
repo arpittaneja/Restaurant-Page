@@ -1,7 +1,21 @@
 import createHtmlElement from './create';
 
 function loadHomeContent() {
-  const div = createHtmlElement('div', null, null, 'dssa');
+  const homeHead = createHtmlElement(
+    'div',
+    ['home-head'],
+    null,
+    'Welcome to Tannin and Table'
+  );
+
+  const homeMain = createHtmlElement(
+    'div',
+    ['home-main'],
+    null,
+    'Enjoy the finest cousines!'
+  );
+  const div = createHtmlElement('div', ['tab-content'], null, null);
+  div.append(homeHead, homeMain);
   return div;
 }
 

@@ -10,13 +10,13 @@
     "ecmaVersion": "latest"
   },
   "rules": {
-    // "no-console": "off",
+    "no-console": "off",
     "prettier/prettier": [
-        "warn",
-        {
-          "singleQuote": true,
-          "semi": true
-        }
-      ]
+      "warn",
+      {
+        "singleQuote": true,
+        "semi": true
+      }
+    ]
   }
 }

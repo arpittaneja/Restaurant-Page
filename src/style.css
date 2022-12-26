@@ -21,13 +21,22 @@ body {
     /* resize: both;
     overflow: auto; */
     display: grid;
-    grid-template-rows: 10vh  1fr;
+    grid-template-rows: 10vh 1fr;
     /* align-content: start; */
 }
 
-footer {
+.order {
     text-align: center;
     padding-block: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5vw;
+    font-size: 1.2em;
+}
+
+.footer {
+    text-align: center;
 }
 
 /* .red {
@@ -52,7 +61,7 @@ footer {
     border-radius: 10px;
     color: black;
     padding: 0 10px 0 10px;
-    opacity:0.8;
+    opacity: 0.8;
 }
 
 .tab {
@@ -62,12 +71,18 @@ footer {
     /* padding: 1vh; */
     font-size: 1.3rem;
     opacity: 100%;
+    border-radius: 10px;
+
 }
 
 .selected {
     opacity: 1;
     border-radius: 10px;
     background-color: rgb(39, 246, 39);
+    height: 70%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .tab-content {

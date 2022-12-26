@@ -4,15 +4,31 @@ import createInitialPage from './initial';
 import loadHomeContent from './home';
 import loadMenuContent from './menu';
 import loadContactContent from './contact';
+import Icon1 from './swiggy.png';
+import Icon2 from './zomato.png';
 
 createInitialPage();
 
 const tabs = Array.from(document.querySelectorAll('.tab'));
 // const tabContent = loadHomeContent();
-const footer = createHtmlElement('footer', null, null, 'footer');
+const orderDiv = createHtmlElement('div', ['order'], null, 'Order Online');
+
+const swiggyIcon = new Image();
+swiggyIcon.src = Icon1;
+swiggyIcon.style.height = '100px';
+
+const zomatoIcon = new Image();
+zomatoIcon.src = Icon2;
+// zomatoIcon.href = 'https://www.google.com';
+orderDiv.append(swiggyIcon, zomatoIcon);
+swiggyIcon.style.height = '90px';
+zomatoIcon.style.height = '90px';
+// swiggyIcon.style.width = 'auto';
+
+const footer = createHtmlElement('div', ['footer'], null, 'footer');
 const content = document.querySelector('#content');
 content.append(loadHomeContent());
-document.querySelector('body').append(footer);
+document.querySelector('body').append(orderDiv, footer);
 // tabContent.append(loadHomeContent());
 
 tabs.forEach((tab) => {

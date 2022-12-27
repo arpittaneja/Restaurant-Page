@@ -8,13 +8,18 @@
     font-family: 'Oswald', sans-serif;
 }
 
+::selection {
+    color: black;
+    background: white;
+}
+
 html,
 body {
     height: 100vh;
 }
 
 #content {
-    background: url("./bg.jpg");
+    background: url("./../img/bg.jpg");
     background-size: 100vw 140vh;
 }
 
@@ -97,6 +102,7 @@ body {
     object-fit: cover;
     transition: all 0.3s;
     cursor: pointer;
+    border: 4px solid white;
 }
 
 .menu-content img:hover {
@@ -109,13 +115,25 @@ body {
     flex-flow: column nowrap;
     justify-content: space-around;
     align-items: center;
-    font-size: 1.5rem;
+    font-size: 1.7rem;
 }
 
 .contact-content img {
     width: min(60%, 550px);
     height: auto;
     border-radius: 20px;
+    border: 4px solid white;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.contact-content img:hover {
+    transform: scale(1.06);
+}
+
+.contact-container div {
+    display: flex;
+    flex-flow: column wrap;
 }
 
 .order {
@@ -127,7 +145,12 @@ body {
     gap: 5vw;
     font-size: 1.2em;
     color: black;
-    background-color: #fff;
+    background-color: white;
+}
+
+.order::selection {
+    color: white;
+    background: black;
 }
 
 .order img {
@@ -149,6 +172,8 @@ footer {
 }
 
 .github-logo-container>img {
+    height: 35px;
+    width: auto;
     transition: all 0.3s ease-in-out;
     cursor: pointer;
 }

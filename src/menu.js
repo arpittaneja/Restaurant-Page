@@ -1,15 +1,14 @@
 import createHtmlElement from './create';
-import shotImg from './shot.jpeg';
-import potatoImg from './monstermash.jpg';
-import cookieImg from './eyeballcookies.jpg';
-import shakeImg from './deathshake.jpg';
+import shotIcon from './img/shot.jpeg';
+import potatoIcon from './img/monstermash.jpg';
+import cookieIcon from './img/eyeballcookies.jpg';
+import shakeIcon from './img/deathshake.jpg';
 
 function loadMenuContent() {
   const shot = new Image();
   const potato = new Image();
   const cookie = new Image();
   const shake = new Image();
-  shot.src = shotImg;
   const menu = createHtmlElement('div', ['menu-content'], null, null);
   const menuItem1 = createHtmlElement(
     'div',
@@ -17,6 +16,7 @@ function loadMenuContent() {
     null,
     'Zombie Brain Jello Shots'
   );
+  shot.src = shotIcon;
   menuItem1.append(shot);
   const menuItem2 = createHtmlElement(
     'div',
@@ -24,7 +24,7 @@ function loadMenuContent() {
     null,
     'Monster Mashed Potatoes'
   );
-  potato.src = potatoImg;
+  potato.src = potatoIcon;
   menuItem2.append(potato);
   const menuItem3 = createHtmlElement(
     'div',
@@ -32,7 +32,7 @@ function loadMenuContent() {
     null,
     'Eyeball Cookies'
   );
-  cookie.src = cookieImg;
+  cookie.src = cookieIcon;
   menuItem3.append(cookie);
   const menuItem4 = createHtmlElement(
     'div',
@@ -40,8 +40,9 @@ function loadMenuContent() {
     null,
     'Death Shake'
   );
-  shake.src = shakeImg;
+  shake.src = shakeIcon;
   menuItem4.append(shake);
+
   menu.append(menuItem1, menuItem2, menuItem3, menuItem4);
   return menu;
 }

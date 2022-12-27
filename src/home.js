@@ -7,14 +7,14 @@ function loadHomeContent() {
     null,
     'The Wednesday Café'
   );
-  const homeMain = createHtmlElement(
+  const homeSubHead = createHtmlElement(
     'div',
     ['home-sub-head'],
     null,
     'Where The Darkness Brews'
   );
   const div = createHtmlElement('div', ['home-content'], null, null);
-  div.append(homeHead, homeMain);
+  div.append(homeHead, homeSubHead);
   return div;
 }
 

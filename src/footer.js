@@ -1,13 +1,13 @@
 import createHtmlElement from './create';
-import Icon from './github.svg';
+import githubIcon from './img/github.svg';
 
 function loadFooterContent() {
-  const footer = createHtmlElement('footer', ['footer'], null, null);
+  const footer = createHtmlElement('footer', null, null, null);
 
   const githubLogo = new Image();
-  githubLogo.src = Icon;
+  githubLogo.src = githubIcon;
 
-  const logoContainer = createHtmlElement(
+  const anchorLogoContainer = createHtmlElement(
     'a',
     ['github-logo-container'],
     {
@@ -16,9 +16,8 @@ function loadFooterContent() {
     },
     null
   );
-  githubLogo.style.height = '35px';
-  githubLogo.style.width = '35px';
-  logoContainer.append(githubLogo);
+
+  anchorLogoContainer.append(githubLogo);
   const middleDiv = createHtmlElement('div', null, null, null);
   const lowerDiv = createHtmlElement(
     'div',
@@ -26,19 +25,16 @@ function loadFooterContent() {
     null,
     'The Wednesday Café © 2022 | All Rights Reserved'
   );
-  const span = createHtmlElement('span', ['heart'], null, '♥');
-  const a = createHtmlElement(
+  const heartSpan = createHtmlElement('span', ['heart'], null, '♥');
+  const nameSpan = createHtmlElement(
     'a',
     null,
     { href: 'https://github.com/arpittaneja', target: '_blank' },
     'Arpit Taneja'
   );
-  middleDiv.append('Made with ', span, ' by ', a);
-  footer.append(logoContainer, middleDiv, lowerDiv);
+  middleDiv.append('Made with ', heartSpan, ' by ', nameSpan);
+  footer.append(anchorLogoContainer, middleDiv, lowerDiv);
   return footer;
 }
 
 export default loadFooterContent;
-
-// {/* <span>Made with <span class="heart">♥</span> by <a href="https://github.com/arpittaneja" target="_blank">Arpit
-//         Taneja</a></span> */}

@@ -1,12 +1,9 @@
 import createHtmlElement from './create';
-import mapImg from './map.png';
+import mapIcon from './img/map.png';
 
 function loadContactContent() {
   const map = new Image();
-  map.src = mapImg;
-  // map.style.height = 'auto';
-  // map.style.width = '80%';
-  // swiggyIcon.style.width = 'inherit';
+  map.src = mapIcon;
   const contactDiv = createHtmlElement(
     'div',
     ['contact-container'],
@@ -32,9 +29,14 @@ function loadContactContent() {
     '6th Avenue, Calgary, AB, Canada'
   );
   addressDiv.append(addressBody);
-  const div = createHtmlElement('div', ['contact-content'], null, null);
-  div.append(addressDiv, map, contactDiv);
-  return div;
+  const contactContent = createHtmlElement(
+    'div',
+    ['contact-content'],
+    null,
+    null
+  );
+  contactContent.append(addressDiv, map, contactDiv);
+  return contactContent;
 }
 
 export default loadContactContent;

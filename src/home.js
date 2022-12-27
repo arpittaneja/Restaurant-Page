@@ -9,7 +9,7 @@ function loadHomeContent() {
   );
   const homeMain = createHtmlElement(
     'div',
-    ['home-main'],
+    ['home-sub-head'],
     null,
     'Where The Darkness Brews'
   );

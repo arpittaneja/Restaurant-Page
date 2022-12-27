@@ -5,7 +5,7 @@ function loadHomeContent() {
     'div',
     ['home-head'],
     null,
-    'The Wednesday Cafe'
+    'The Wednesday Café'
   );
   const homeMain = createHtmlElement(
     'div',

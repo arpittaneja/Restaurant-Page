@@ -4,10 +4,10 @@ import Icon from './github.png';
 function loadFooterContent() {
   const footer = createHtmlElement('footer', ['footer'], null, null);
 
-  const upperDiv = createHtmlElement('div', null, null, null);
   const githubLogo = new Image();
   githubLogo.src = Icon;
-  upperDiv.append(githubLogo);
+  githubLogo.height = 35;
+  githubLogo.width = 35;
   const middleDiv = createHtmlElement('div', null, null, null);
   const lowerDiv = createHtmlElement(
     'div',
@@ -23,7 +23,7 @@ function loadFooterContent() {
     'Arpit Taneja'
   );
   middleDiv.append('Made with ', span, ' by ', a);
-  footer.append(upperDiv, middleDiv, lowerDiv);
+  footer.append(githubLogo, middleDiv, lowerDiv);
   return footer;
 }
 

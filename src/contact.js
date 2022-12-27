@@ -1,23 +1,41 @@
 import createHtmlElement from './create';
-import Icon1 from './swiggy.png';
+import mapImg from './map.png';
 
 function loadContactContent() {
-  const swiggyIcon = new Image();
-  swiggyIcon.src = Icon1;
-  swiggyIcon.style.height = '200px';
+  const map = new Image();
+  map.src = mapImg;
+  // map.style.height = 'auto';
+  // map.style.width = '80%';
   // swiggyIcon.style.width = 'inherit';
-  const contactHead = createHtmlElement(
+  const contactDiv = createHtmlElement(
     'div',
-    ['contact-head'],
+    ['contact-div'],
     null,
     'Contact Us'
   );
-  const mapImg = createHtmlElement('div', ['map'], null, null);
-  const addressDiv = createHtmlElement('div', ['address'], null, 'address');
+  const contactBody = createHtmlElement('div', ['contact-body'], null, null);
+  const emailSpan = createHtmlElement(
+    'span',
+    null,
+    null,
+    'thewednesdaycafe@gmail.com'
+  );
+  const numberSpan = createHtmlElement('span', null, null, '+91 9876543210');
+
+  contactBody.append(emailSpan, numberSpan);
+  contactDiv.append(contactBody);
+  const addressDiv = createHtmlElement('div', ['address'], null, 'Address');
+  const addressBody = createHtmlElement(
+    'div',
+    ['address-body'],
+    null,
+    '6th Avenue, Calgary, AB, Canada'
+  );
+  addressDiv.append(addressBody);
   // mapImg.style.width = 'inherit';
-  mapImg.style.height = '400px';
+  // mapImg.style.height = '400px';
   const div = createHtmlElement('div', ['contact-content'], null, null);
-  div.append(contactHead, mapImg, addressDiv);
+  div.append(addressDiv, map, contactDiv);
   return div;
 }
 

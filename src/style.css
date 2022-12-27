@@ -33,7 +33,7 @@ body {
     background: url("./bg.jpg");
     background-size: cover;
     /* border: 3px solid palegreen; */
-    height: 100vh;
+    min-height: 100vh;
     display: grid;
     grid-template-rows: 12vh 1fr;
     align-content: start;
@@ -104,46 +104,69 @@ body {
     text-align: center;
     font-size: 2rem;
     color: white;
+    /* display: flex; */
+    /* flex-flow: column nowrap; */
+    /* justify-content: center; */
+    border: 5px solid rgb(167, 47, 219);
     display: flex;
     flex-flow: column nowrap;
-    justify-content: center;
-    border: 5px solid rgb(167, 47, 219);
+    justify-content: space-around;
+    align-items: center;
 }
 
+.contact-content *{
+    border: 2px solid white;
+}
+
+.contact-content img{
+    width: 62%;
+    height: auto;
+    border-radius: 20px;
+}
 .menu-content {
-    height: 100%;
+    /* height: 100%; */
     text-align: center;
     color: white;
-    display: grid;
+    /* display: grid; */
     /* grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); */
     /* grid-template-rows: repeat(auto-fit, minmax(200px, 1fr)); */
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(2, 1fr);
-    grid-auto-flow: row;
-    gap: 20px;
+    /* grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr); */
+    /* grid-auto-flow: row; */
+    /* gap: 20px; */
     /* padding: clamp(20px, 4vh, 100px) clamp(20px, 5vw, 100px); */
-    padding: 2vh 20vw;
-    /* overflow: hidden;
+    /* padding: 2vh 20vw;
+    overflow:auto;
     resize: both; */
     /* place-items: center; */
     /* justify-content: space-around;     */
     /* align-items: stretch; */
+
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    gap: 50px;
+    padding: 50px clamp(80px, 15vw, 250px);
 }
 
-.menu-content>div{
-    width: min(100%, 350px);
-    height: min(100%, 400px);
+.menu-content>div {
+    width: clamp(300px, 40%, 350px);
+    /* height: min(100%, 400px); */
     display: flex;
     flex-flow: column-reverse nowrap;
     /* flex-direction: ; */
     justify-content: center;
     align-items: center;
+    gap: 30px;
+    font-size: 1.2rem;
+    /* flex: 1 1 0; */
 }
 
 .menu-content img {
     border-radius: 10px;
     aspect-ratio: 1 / 1;
-    width: min(100%, 350px);
+    /* width: min(100%, 350px); */
+    width: 100%;
     object-fit: cover;
     /* display: none; */
 }
@@ -191,7 +214,7 @@ footer {
 
 [class^="menu-item-"] {
     /* background-color: #fff; */
-    border: 1px solid white;
+    /* border: 1px solid white; */
     border-radius: 8px;
     /* width: 100px; */
     /* flex: 1 1 0; */

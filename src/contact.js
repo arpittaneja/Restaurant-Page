@@ -9,9 +9,9 @@ function loadContactContent() {
   // swiggyIcon.style.width = 'inherit';
   const contactDiv = createHtmlElement(
     'div',
-    ['contact-div'],
+    ['contact-container'],
     null,
-    'Contact Us'
+    'CONTACT US'
   );
   const contactBody = createHtmlElement('div', ['contact-body'], null, null);
   const emailSpan = createHtmlElement(
@@ -24,7 +24,7 @@ function loadContactContent() {
 
   contactBody.append(emailSpan, numberSpan);
   contactDiv.append(contactBody);
-  const addressDiv = createHtmlElement('div', ['address'], null, 'Address');
+  const addressDiv = createHtmlElement('div', ['address'], null, 'ADDRESS');
   const addressBody = createHtmlElement(
     'div',
     ['address-body'],
@@ -32,8 +32,6 @@ function loadContactContent() {
     '6th Avenue, Calgary, AB, Canada'
   );
   addressDiv.append(addressBody);
-  // mapImg.style.width = 'inherit';
-  // mapImg.style.height = '400px';
   const div = createHtmlElement('div', ['contact-content'], null, null);
   div.append(addressDiv, map, contactDiv);
   return div;

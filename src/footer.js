@@ -1,13 +1,24 @@
 import createHtmlElement from './create';
-import Icon from './github.png';
+import Icon from './github.svg';
 
 function loadFooterContent() {
   const footer = createHtmlElement('footer', ['footer'], null, null);
 
   const githubLogo = new Image();
   githubLogo.src = Icon;
-  githubLogo.height = 35;
-  githubLogo.width = 35;
+
+  const logoContainer = createHtmlElement(
+    'a',
+    ['github-logo-container'],
+    {
+      href: 'https://github.com/arpittaneja/Restaurant-Page',
+      target: '_blank',
+    },
+    null
+  );
+  githubLogo.style.height = '35px';
+  githubLogo.style.width = '35px';
+  logoContainer.append(githubLogo);
   const middleDiv = createHtmlElement('div', null, null, null);
   const lowerDiv = createHtmlElement(
     'div',
@@ -23,7 +34,7 @@ function loadFooterContent() {
     'Arpit Taneja'
   );
   middleDiv.append('Made with ', span, ' by ', a);
-  footer.append(githubLogo, middleDiv, lowerDiv);
+  footer.append(logoContainer, middleDiv, lowerDiv);
   return footer;
 }
 

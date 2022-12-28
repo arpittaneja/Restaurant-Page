@@ -20,7 +20,7 @@ body {
 
 #content {
     background: url("./../img/bg.jpg");
-    background-size: 100vw 140vh;
+    background-size: 100vw 145vh;
     /* background-size: cover; */
 }
 
@@ -82,7 +82,7 @@ body {
     text-align: center;
     display: flex;
     flex-flow: row wrap;
-    justify-content: space-around;
+    justify-content: center;
     gap: 40px;
     padding: 50px min(15vw, 250px);
 }
@@ -134,7 +134,7 @@ body {
     transform: scale(1.06);
 }
 
-.contact-container div {
+.contact-container div{
     display: flex;
     flex-flow: column wrap;
 }

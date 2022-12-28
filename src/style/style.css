@@ -21,6 +21,7 @@ body {
 #content {
     background: url("./../img/bg.jpg");
     background-size: 100vw 140vh;
+    /* background-size: cover; */
 }
 
 .upper-content {
@@ -138,6 +139,7 @@ body {
 }
 
 .order {
+    opacity: 0.8;
     text-align: center;
     padding-block: 50px;
     display: flex;
